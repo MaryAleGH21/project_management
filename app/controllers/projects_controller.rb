@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  http_basic_authenticate_with name: "desafiovamoscontodo", password: "XAHTJEAS23123%23", only: :new
   def index
     @projects = Project.all 
     if params[:status] and params[:status] != 'all'
